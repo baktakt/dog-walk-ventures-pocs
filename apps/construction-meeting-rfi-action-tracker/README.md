@@ -2,7 +2,11 @@
 
 ## Status
 
-POC scaffold + static prototype v0.
+POC scaffold + static prototype v0. Deployed to Vercel.
+
+## Live URL
+
+https://construction-meeting-rfi-action-tra.vercel.app
 
 ## Source opportunity
 
