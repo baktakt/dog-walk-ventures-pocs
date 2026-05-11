@@ -11,6 +11,8 @@ apps/
   construction-meeting-rfi-action-tracker/
 packages/
   design-system/
+templates/
+  static-smart-tool/
 ```
 
 ## Apps
@@ -50,6 +52,24 @@ Every POC should follow:
 - `packages/design-system/DESIGN.md`
 - `packages/design-system/poc-ui-conventions.md`
 - `packages/design-system/app-shell.md`
+
+## Templates
+
+Reusable POC templates live in:
+
+`templates/`
+
+Current template:
+
+- `templates/static-smart-tool` — modern mobile-first accessible base for simple browser POCs.
+
+Create a new POC from the template:
+
+```bash
+cp -R templates/static-smart-tool apps/my-new-poc
+```
+
+Then customize copy, sample data, parser/extractor logic, and docs.
 
 ## Doctrine
 

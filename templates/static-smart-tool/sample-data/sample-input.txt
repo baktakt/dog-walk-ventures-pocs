@@ -1,0 +1,7 @@
+Sample field notes
+
+1. Team A needs to provide updated document package by Friday.
+2. Drawing note conflicts with specification section 08 71 00. Confirm correct requirement.
+3. Client approved option B for the next revision.
+4. Coordinator asked who owns follow-up with supplier.
+5. Team B will send revised schedule dates before next meeting.
