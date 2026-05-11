@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Construction Meeting/RFI Action Tracker — Dog Walk Ventures</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">Dog Walk Ventures</p>
+      <h1>Construction Meeting/RFI Action Tracker</h1>
+      <p class="motto">Small tools. Real pain. Human upside.</p>
+    </div>
+    <span class="badge">POC · draft assistant</span>
+  </header>
+
+  <main id="main" class="page-shell">
+    <section class="promise card" aria-labelledby="promise-title">
+      <div>
+        <p class="eyebrow">Promise</p>
+        <h2 id="promise-title">Turn rough meeting notes into follow-up work.</h2>
+        <p>For site managers and project engineers, this tool turns messy construction meeting notes or field questions into subcontractor-specific action items, draft RFIs, and an Excel/email-ready follow-up tracker.</p>
+      </div>
+      <div class="trust-box" role="note">
+        <strong>Draft assistant — review before use.</strong>
+        <span>Do not paste confidential project data into this POC. It does not replace professional judgment.</span>
+      </div>
+    </section>
+
+    <section class="workbench-grid" aria-label="Input and output workbench">
+      <section class="card input-card" aria-labelledby="input-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Input workbench</p>
+            <h2 id="input-title">Paste meeting notes</h2>
+          </div>
+          <button id="sampleBtn" class="button secondary" type="button">Use sample notes</button>
+        </div>
+        <label for="notes">Meeting notes, field notes, or coordination questions</label>
+        <textarea id="notes" rows="18" spellcheck="true" placeholder="Paste notes like: Electrical to provide updated lighting submittal by Friday..."></textarea>
+        <div class="button-row">
+          <button id="generateBtn" class="button primary" type="button">Create action list</button>
+          <button id="clearBtn" class="button ghost" type="button">Clear</button>
+        </div>
+        <p class="helper">POC parser uses simple rules for now. LLM extraction can be added after the workflow feels right.</p>
+      </section>
+
+      <section class="card output-card" aria-labelledby="output-title" aria-live="polite">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Output panel</p>
+            <h2 id="output-title">Draft tracker</h2>
+          </div>
+          <span id="summaryBadge" class="badge muted">No output yet</span>
+        </div>
+
+        <div class="stats" aria-label="Result counts">
+          <div><strong id="actionCount">0</strong><span>Actions</span></div>
+          <div><strong id="rfiCount">0</strong><span>RFIs</span></div>
+          <div><strong id="decisionCount">0</strong><span>Decisions</span></div>
+          <div><strong id="questionCount">0</strong><span>Review</span></div>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Output categories">
+          <button class="tab active" data-tab="actions" type="button">Actions</button>
+          <button class="tab" data-tab="rfis" type="button">RFI candidates</button>
+          <button class="tab" data-tab="decisions" type="button">Decisions</button>
+          <button class="tab" data-tab="review" type="button">Needs review</button>
+        </div>
+
+        <div id="results" class="results empty-state">
+          <p>Paste notes or load the sample, then create a draft tracker.</p>
+        </div>
+
+        <div class="button-row export-row">
+          <button id="copyCsvBtn" class="button secondary" type="button" disabled>Copy CSV</button>
+          <button id="downloadCsvBtn" class="button secondary" type="button" disabled>Download CSV</button>
+          <button id="copyEmailBtn" class="button secondary" type="button" disabled>Copy email summary</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="card review-card" aria-labelledby="review-title">
+      <p class="eyebrow">Human review</p>
+      <h2 id="review-title">Check before sending</h2>
+      <ul>
+        <li>Confirm responsible party and trade before assigning work.</li>
+        <li>Review RFI candidates against contract, drawings, and specifications.</li>
+        <li>Add missing due dates and project references.</li>
+        <li>Do not treat this POC as an official project record.</li>
+      </ul>
+    </section>
+
+    <section class="card feedback-card" aria-labelledby="feedback-title">
+      <p class="eyebrow">POC learning</p>
+      <h2 id="feedback-title">Was this useful?</h2>
+      <p>If this were live, this section would capture: what it missed, what was wrong, and whether the output was worth copying into your real tracker.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
