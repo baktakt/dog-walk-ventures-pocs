@@ -2,7 +2,11 @@
 
 ## Status
 
-POC scaffold + static prototype v0.
+POC scaffold + static prototype v0. Deployed to Vercel.
+
+## Live URL
+
+https://site-photo-observation-log.vercel.app
 
 ## Source opportunity
 
