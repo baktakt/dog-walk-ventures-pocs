@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F6F3EA" />
+  <title>Site Photo Observation Log</title>
+  <meta name="description" content="Turn rough site-photo notes into structured construction observation logs." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="app-header" role="banner">
+    <div class="brand-lockup" aria-label="Dog Walk Ventures">
+      <span class="brand-mark" aria-hidden="true">dw</span>
+      <div>
+        <p class="eyebrow">Dog Walk Ventures</p>
+        <p class="motto">Small tools. Real pain. Human upside.</p>
+      </div>
+    </div>
+    <span class="status-badge">POC · draft assistant</span>
+  </header>
+
+  <main id="main" class="page" tabindex="-1">
+    <section class="hero" aria-labelledby="tool-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Construction field documentation</p>
+        <h1 id="tool-title">Turn site-photo notes into an observation log.</h1>
+        <p class="lede">Paste rough photo captions, WhatsApp notes, or field observations and get structured draft records with location, category, severity, status, and next action.</p>
+      </div>
+      <aside class="trust-card" aria-labelledby="trust-title">
+        <h2 id="trust-title">Draft assistant</h2>
+        <p>POC v0 does not analyze image pixels. Review all safety and quality notes before using them on a real project. Do not paste confidential project data.</p>
+      </aside>
+    </section>
+
+    <section class="utility-grid" aria-label="Site observation workbench">
+      <section class="panel input-panel" aria-labelledby="input-title">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Input</p>
+            <h2 id="input-title">Paste photo captions or field notes</h2>
+          </div>
+          <button class="button secondary" id="sampleBtn" type="button">Use sample</button>
+        </div>
+
+        <label for="sourceInput">Site-photo notes</label>
+        <textarea id="sourceInput" rows="14" placeholder="Example: Photo 03 - South elevation scaffold: missing toe board on bay 4. Scaffold contractor to correct before work continues."></textarea>
+
+        <div class="action-bar" aria-label="Input actions">
+          <button class="button primary" id="runBtn" type="button">Create observation log</button>
+          <button class="button quiet" id="clearBtn" type="button">Clear</button>
+        </div>
+
+        <p class="microcopy">Use one line per photo or observation. This browser-only POC does not upload, store, or analyze images.</p>
+      </section>
+
+      <section class="panel output-panel" aria-labelledby="output-title" aria-live="polite">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Output</p>
+            <h2 id="output-title">Draft observation log</h2>
+          </div>
+          <span class="status-badge muted" id="resultStatus">Waiting</span>
+        </div>
+
+        <div class="summary-strip" aria-label="Output summary">
+          <div><strong id="observationCount">0</strong><span>Observations</span></div>
+          <div><strong id="highCount">0</strong><span>High priority</span></div>
+          <div><strong id="reviewCount">0</strong><span>Review flags</span></div>
+        </div>
+
+        <div id="results" class="empty-state">
+          <p>Use the sample or paste your own notes, then create a draft observation log.</p>
+        </div>
+
+        <div class="action-bar" aria-label="Output actions">
+          <button class="button secondary" id="copyBtn" type="button" disabled>Copy report</button>
+          <button class="button secondary" id="csvBtn" type="button" disabled>Download CSV</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="support-grid" aria-label="Review and feedback">
+      <section class="panel compact-panel" aria-labelledby="review-title">
+        <p class="eyebrow">Human review</p>
+        <h2 id="review-title">Check before sharing</h2>
+        <ul>
+          <li>Confirm location, trade, severity, and responsible party.</li>
+          <li>Escalate safety-critical items through your normal site process.</li>
+          <li>Remove confidential details before copying outside the project team.</li>
+        </ul>
+      </section>
+
+      <section class="panel compact-panel" aria-labelledby="feedback-title">
+        <p class="eyebrow">POC learning</p>
+        <h2 id="feedback-title">What this is testing</h2>
+        <p>Can a small tool reduce the admin between phone photos and structured site records, without requiring a heavyweight project-management system?</p>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
