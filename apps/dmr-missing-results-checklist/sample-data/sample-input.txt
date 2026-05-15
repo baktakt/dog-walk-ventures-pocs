@@ -1,0 +1,23 @@
+DMR period: April 2026
+DMR due date: 2026-05-28
+
+Permit requirements:
+BOD, weekly, limit 30 mg/L
+TSS, weekly, limit 30 mg/L
+Ammonia Nitrogen, weekly, limit 10 mg/L
+pH, daily, range 6.0-9.0
+Flow, daily, report only
+E. coli, weekly, limit 126 cfu/100mL
+
+Lab / operator results:
+parameter,sample_date,result,unit,status,source,notes
+BOD,2026-04-07,22,mg/L,received,Acme Lab,
+BOD,2026-04-14,,mg/L,pending,Acme Lab,lab said rerun
+BOD,2026-04-21,31,mg/L,received,Acme Lab,check permit limit
+TSS,2026-04-07,18,mg/L,received,Acme Lab,
+TSS,2026-04-14,19,mg/L,received,Acme Lab,
+TSS,2026-04-21,,mg/L,missing,,no result in email folder
+Ammonia Nitrogen,2026-04-07,7.4,mg/L,received,Acme Lab,
+pH,2026-04-01,7.1,su,received,Operator log,
+Flow,2026-04-01,0.82,MGD,received,SCADA export,
+E. coli,2026-04-07,,cfu/100mL,pending,Acme Lab,expected tomorrow

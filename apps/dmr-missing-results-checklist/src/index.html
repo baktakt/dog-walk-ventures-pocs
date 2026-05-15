@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DMR Missing Results Checklist</title>
+  <meta name="description" content="Browser-only draft checklist for missing wastewater DMR lab results and permit readiness." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#workbench">Skip to workbench</a>
+  <header class="hero" role="banner">
+    <nav class="topbar" aria-label="Product">
+      <span class="brand-mark">DWV</span>
+      <span class="eyebrow">Dog Walk Ventures POC</span>
+    </nav>
+    <div class="hero-grid">
+      <section>
+        <p class="kicker">For small wastewater and public-works teams</p>
+        <h1>Find missing DMR lab results before the deadline.</h1>
+        <p class="lede">Paste permit requirements and lab-result rows. Get a draft readiness checklist, follow-up notes, and exportable CSV without uploading data to a server.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#workbench">Try sample data</a>
+          <a class="button secondary" href="#limits">Read limits</a>
+        </div>
+      </section>
+      <aside class="trust-card" id="limits" aria-label="Important limits">
+        <strong>Draft checklist only.</strong>
+        <p>This POC does not file DMRs, interpret permits, or provide legal/compliance advice. Verify every item against your actual permit and official reporting system.</p>
+        <p class="privacy-note">Runs in your browser. No backend, login, or storage in this v0.</p>
+      </aside>
+    </div>
+  </header>
+
+  <main id="workbench" class="shell">
+    <section class="panel input-panel" aria-labelledby="input-title">
+      <div class="section-heading">
+        <p class="eyebrow">Input</p>
+        <h2 id="input-title">Paste requirements and lab rows</h2>
+      </div>
+      <label for="dmrInput">Permit text plus CSV-style result rows</label>
+      <textarea id="dmrInput" spellcheck="false"></textarea>
+      <div class="form-row">
+        <label for="dueDate">DMR due date</label>
+        <input id="dueDate" type="date" value="2026-05-28" />
+      </div>
+      <div class="button-row">
+        <button id="loadSample" type="button" class="button secondary">Load sample</button>
+        <button id="analyze" type="button" class="button primary">Create checklist</button>
+      </div>
+    </section>
+
+    <section class="panel output-panel" aria-labelledby="output-title">
+      <div class="section-heading">
+        <p class="eyebrow">Output</p>
+        <h2 id="output-title">Submission readiness draft</h2>
+      </div>
+      <div id="summaryCards" class="summary-grid" aria-live="polite"></div>
+      <div id="report" class="report" aria-live="polite">
+        <p class="empty-state">Load the sample or paste your own rows to generate a draft checklist.</p>
+      </div>
+      <div class="button-row">
+        <button id="copyReport" type="button" class="button secondary">Copy report</button>
+        <button id="downloadCsv" type="button" class="button secondary">Download CSV</button>
+      </div>
+    </section>
+
+    <section class="panel review-panel" aria-labelledby="review-title">
+      <div class="section-heading">
+        <p class="eyebrow">Human review</p>
+        <h2 id="review-title">Before using the checklist</h2>
+      </div>
+      <ul class="check-list">
+        <li>Confirm the parameters and limits against the actual permit.</li>
+        <li>Check official DMR system entries separately.</li>
+        <li>Follow up with the lab on pending or missing results.</li>
+        <li>Do not treat this output as compliance advice.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Dog Walk Ventures prototype. Built to test whether a tiny checklist can reduce deadline stress for small public utilities.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
